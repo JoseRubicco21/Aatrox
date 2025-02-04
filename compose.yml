@@ -1,0 +1,22 @@
+services:
+  frontend:
+    hostname: 'front-end'
+    build: Docker
+    ports:
+      - 8080:8080
+    volumes:
+      - ./dist:/leaflet-project/dist
+      - ./src:/leaflet-project/src
+      - ./webpack.config.js:/leaflet-project/webpack.config.js
+      - ./package.json:/leaflet-project/package.json
+      - ./scripts/front.sh:/leaflet-project/ini.sh
+    command: 'tail -f /dev/null'
+  backend:
+    hostname: 'back-end'
+    build: Docker
+    ports:
+      - 3000:3000
+    volumes:
+      - ./backend:/leaflet-project/backend/
+      - ./package.json:/leaflet-project/package.json
+      - ./scripts/back.sh:/leaflet-project/ini.sh
