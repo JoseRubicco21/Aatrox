@@ -1,4 +1,4 @@
 {
-    "/user/:id/points": "/points?userId=:id"
-  }
-  
+	"/user/:id/points": "/points?userId=:id",
+	"/users/": "/users"
+}

@@ -15,7 +15,7 @@ services:
     hostname: 'back-end'
     build: Docker
     ports:
-      - 3000:3000
+      - 3001:3000
     volumes:
       - ./backend:/leaflet-project/backend/
       - ./package.json:/leaflet-project/package.json

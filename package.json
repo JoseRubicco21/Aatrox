@@ -8,7 +8,7 @@
 		"serve-prod": "webpack serve --watch --mode=production",
 		"dev": "webpack serve",
 		"build": "webpack build --mode=production",
-		"backend": "json-server /leaflet-project/backend/db.json --routes /leaflet-project/backend/routes.json -p 3000 --middleware /leaflet-project/backend/cors.js"
+		"backend": "node /leaflet-project/backend/server.js"
 	},
 	"author": "a23joserf",
 	"license": "MIT",
